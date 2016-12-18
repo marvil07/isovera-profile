@@ -1,0 +1,28 @@
+{
+    "name": "isovera/isovera-profile",
+    "description": "Drupal 8 install profile based on Isovera's standards.",
+    "type": "drupal-profile",
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Travis Tomka",
+            "email": "underoathosx@gmail.com"
+        }
+    ],
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url":  "https://packages.drupal.org/8"
+        }
+    },
+    "require": {
+        "drupal/devel": "^1.0",
+        "drupal/token": "^1.0",
+        "drupal/linkit": "^4.0",
+        "drupal/ctools": "^3.0",
+        "drupal/field_group": "^1.0",
+        "drupal/admin_toolbar": "^1.0"
+    }
+}

@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * The installation implementation for isovera profile.
+ */
+use Drupal\user\Entity\User;
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function isovera_install() {
+
+  // Assign user 1 the "administrator" role.
+  $user = User::load(1);
+  $user->roles[] = 'administrator';
+  $user->save();
+
+  // Allow only administrators to create user account.
+  $user_settings = \Drupal::configFactory()->getEditable('user.settings');
+  $user_settings->set('register', USER_REGISTER_ADMINISTRATORS_ONLY)->save(TRUE);
+
+  // System default permissions for system roles.
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, array('access comments'));
+  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, array());
+
+  // Search default permissions for system roles.
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, array('search content'));
+  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, array('search content'));
+
+  // Contact default permissions for the system roles.
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, array('access site-wide contact form'));
+  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, array('access site-wide contact form'));
+
+  // Set front page to "node".
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
+
+  // Enable the admin theme.
+  \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+}

@@ -1,0 +1,53 @@
+name: Isovera
+type: profile
+description: Install commonly used core/contrib modules that are pre-configured to Isovera's standards.
+core: 8.x
+
+# =========== Drupal Core Modules ==============
+dependencies:
+  - block
+  - big_pipe
+  - block_content
+  - breakpoint
+  - ckeditor
+  - config
+  - contextual
+  - datetime
+  - dynamic_page_cache
+  - editor
+  - file
+  - field_ui
+  - help
+  - image
+  - options
+  - menu_ui
+  - menu_link_content
+  - node
+  - path
+  - page_cache
+  - quickedit
+  - rdf
+  - responsive_image
+  - syslog
+  - search
+  - toolbar
+  - taxonomy
+  - views
+  - views_ui
+
+# =========== Contributed Modules ==============
+
+  - admin_toolbar
+  - admin_toolbar_tools
+  - token
+  - linkit
+  - field_group
+  - ctools
+  - devel
+  - kint
+
+# =========== Drupal Core Themes ==============
+
+themes:
+  - bartik
+  - seven
