@@ -32,6 +32,7 @@ dependencies:
   - search
   - toolbar
   - taxonomy
+  - update
   - views
   - views_ui
 
