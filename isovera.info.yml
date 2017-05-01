@@ -40,11 +40,29 @@ dependencies:
 
   - admin_toolbar
   - admin_toolbar_tools
-  - token
+  - adminimal_admin_toolbar
+  - editor_advanced_link
+  - entity_reference_revisions
+  - google_analytics
+  - components
+  - config_split
+  - config_update
   - linkit
   - field_group
   - ctools
   - devel
+  - seckit
+  - stage_file_proxy
+  - metatag
+  - module_filter
+  - menu_link_attributes
+  - webform
+  - redirect
+  - simple_sitemap
+  - token
+  - pathauto
+  - paragraphs
+  - password_policy
   - kint
 
 # =========== Drupal Core Themes ==============
