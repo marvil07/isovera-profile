@@ -15,11 +15,6 @@
         "drupal": {
             "type": "composer",
             "url":  "https://packages.drupal.org/8"
-        },
-        "isotheme_starter": {
-            "type": "vcs",
-            "url": "git@github.com:isovera/isotheme_starter.git",
-            "no-api": true
         }
     },
     "require": {
@@ -42,7 +37,6 @@
         "drupal/password_policy": "^3.0",
         "drupal/google_analytics": "^2.1",
         "drupal/stage_file_proxy": "^1.0",
-        "isovera/isotheme_starter": "^0.0.1",
         "drupal/menu_link_attributes": "^1.0",
         "drupal/editor_advanced_link": "^1.4",
         "drupal/adminimal_admin_toolbar": "^1.3",
