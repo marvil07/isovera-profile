@@ -49,9 +49,7 @@ dependencies:
   - linkit
   - field_group
   - ctools
-  - devel
   - seckit
-  - stage_file_proxy
   - metatag
   - module_filter
   - menu_link_attributes
