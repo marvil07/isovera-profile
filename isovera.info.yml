@@ -44,7 +44,6 @@ dependencies:
   - editor_advanced_link
   - entity_reference_revisions
   - google_analytics
-  - components
   - config_split
   - config_update
   - linkit
